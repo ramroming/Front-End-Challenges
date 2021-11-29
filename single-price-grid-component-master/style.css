@@ -1,0 +1,175 @@
+:root{
+    
+    --Cyan: hsl(179, 62%, 43%);
+    --light-Cyan: hsla(179, 62%, 43%, 0.733);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    min-height:100vh;
+    font-family: 'Karla', sans-serif;
+    font-size:16px;
+    background-color: var(--Light-Gray);
+    line-height:1.5;
+}
+
+.container.grid{
+    margin:auto;
+    padding:4rem 1.5rem;
+    max-width:700px;
+    min-width:332;
+}
+
+/* Utilities */
+
+.grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap:0;
+}
+
+.flex{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+/* Grid Items Paddings */
+
+.header.flex, .sign-up.flex, .footer.flex{
+    padding:1.5rem;
+}
+
+/* First Grid Item */
+
+.header.flex{
+    background-color: white;
+    border-radius:0.5rem 0.5rem 0 0;
+
+}
+
+.header.flex h2, .header.flex h4{
+    padding-bottom:1rem;
+}
+
+.header.flex h2{
+    color:var(--Cyan);
+}
+
+.header.flex h4{
+    color:var(--Bright-Yellow);  
+}
+
+.header.flex p{
+    color:var(--Grayish-Blue);
+}
+
+/* Second Grid Item */
+.sign-up.flex{
+    background-color: var(--Cyan);
+}
+
+.sign-up.flex h3{
+    color:white;
+    padding-bottom:0.5rem;
+}
+
+.sign-up.flex p{
+    color:white;
+}
+
+.money.flex{
+    flex-direction: row;
+    gap:0.5rem;
+    align-items:center;
+}
+
+.money.flex span{
+    font-size: 30px;
+    color:white;
+    font-weight: 700;
+}
+
+.money.flex p{
+    color:var(--Light-Gray);
+}
+
+#access{
+    padding-bottom:2rem;
+}
+
+.sign-up.flex a{
+    text-decoration: none;
+    width:100%;
+    max-width:245px;
+    text-align: center;
+    background-color: var(--Bright-Yellow);
+    padding:0.75rem 0;
+    border-radius:0.3rem;
+    color:white;
+    filter:drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.712))
+}
+
+/* Third Grid Item */
+
+.footer.flex{
+    background-color: var(--light-Cyan);
+    border-radius:0 0 0.5rem 0.5rem;
+}
+
+.footer.flex h3{
+    color:white;
+    padding-bottom:0.5rem;
+}
+
+li{
+    color:var(--Light-Gray);
+}
+
+@media screen and (min-width:500px){
+    .container.grid{
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    .header.flex{
+        grid-column:1/span2;
+        padding:2rem 3rem 3rem 3rem;
+
+    }
+
+    .footer.flex,.sign-up.flex{
+        padding-top:2rem;
+        padding-bottom:2rem;
+        padding-left:3rem;
+    }
+
+    .footer.flex{
+        border-radius:0 0 0.5rem 0;
+       
+    }
+
+    .sign-up.flex{
+        border-radius:0 0 0 0.5rem;
+       
+    }
+
+    ul{
+        font-size: 15px;
+    }
+
+
+}

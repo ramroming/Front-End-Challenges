@@ -1,0 +1,209 @@
+:root{
+    
+    --VeryDarkMagenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --DarkGrayishMagenta: hsl(303, 10%, 53%);
+    --LightGrayishMagenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    min-height:100vh;
+    font-family: 'Spartan', sans-serif;
+    background-color: var(--White);
+    background: url(images/bg-pattern-top-mobile.svg) left top no-repeat, url(images/bg-pattern-bottom-mobile.svg) right bottom no-repeat;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:2rem;
+}
+
+.flex{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap:wrap;
+}
+
+
+.main-container{
+    width:90%;
+    margin:3rem auto;
+}
+
+.headings h1{
+    padding:0.5rem 1rem;
+    color:var(--VeryDarkMagenta);
+}
+
+.headings p{
+    color:var(--DarkGrayishMagenta);
+    padding:1rem 0;
+}
+
+.reviews{
+    gap:1rem;
+}
+
+.reviews div{
+    background-color:var(--LightGrayishMagenta);
+    width:100%;
+    border-radius: 0.5rem;
+    padding-bottom:1rem;
+}
+
+.stars.flex{
+    flex-direction: row;
+    justify-content: center;
+    padding:1rem 0;
+}
+
+.stars img{
+    padding:0 0.5rem;
+}
+
+.comments.flex{
+    gap:1rem;
+    padding:1rem 0;
+
+}
+
+.card.flex{
+    background-color:var(--VeryDarkMagenta);
+    border-radius: 0.5rem;
+    padding:2rem 3rem;
+    align-items:flex-start;
+    text-align: left;
+}
+
+.name.flex{
+    flex-direction: row;
+}
+
+.name.flex img{
+    width:50px;
+    border-radius: 50%;
+}
+
+.details{
+    margin-left:1rem;
+}
+
+.details h5{
+    color:var(--White);
+}
+
+.details h6{
+    color:var(--Soft-Pink);
+    font-size: 13.28px;
+    font-weight: normal;
+    padding:0.2rem 0;
+}
+
+.card.flex p{
+    color:var(--LightGrayishMagenta);
+    padding:1rem 0 0.5rem 0;
+}
+
+
+@media screen and (min-width:1000px){
+
+    body{
+        background: url(images/bg-pattern-top-desktop.svg) left top no-repeat, url(images/bg-pattern-bottom-desktop.svg) right bottom no-repeat;
+    }
+
+    .big-container.flex{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-container.grid{
+        grid-template-columns: repeat(3,1fr);
+        width:100%;
+        max-width: 1560px;
+        padding: 0 3rem;
+        
+    }
+
+    .flex{
+        flex-direction: row;
+    }
+
+    .headings.flex{
+        align-self: center;
+        grid-column:1/1;
+        text-align:left;
+    }
+
+    .headings.flex h1{
+        padding:0 1rem;
+    }
+
+    .headings.flex p{
+        padding:0.5rem 1rem;
+    }
+
+    .comments.flex{
+        grid-column:1/span 3;
+        grid-row:2/2;
+        justify-content: center;
+    }
+
+    .reviews.flex{
+        grid-column: 2/span 2;
+        min-width:680px;
+        flex-direction: column;
+        align-items:flex-end;
+        
+    }
+
+    .reviews div{
+        width:auto;
+    }
+
+    .stars.flex{
+        justify-content: flex-start;
+        
+    }
+
+    .reviews.flex h4{
+        flex:1;
+    }
+
+    .reviews .one,.reviews .two,.reviews .three{
+            padding:0 2rem;
+            gap:1rem;
+    }
+
+    .one{
+        margin-right:25%;
+    }
+
+    .two{
+
+        margin-right:10%;
+
+    }
+
+
+    .card.flex{
+        width:32%;
+    }
+
+    .comments.flex div.card.flex:nth-child(2){
+        margin-top:2rem;
+    }
+
+    .comments.flex div.card.flex:nth-child(3){
+        margin-top:6rem;
+    }
+}

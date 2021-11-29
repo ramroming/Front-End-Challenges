@@ -1,0 +1,208 @@
+:root{
+    
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+    
+}
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    min-height:100vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size:13px;
+    background-color: var(--Light-grayish-blue);
+    line-height:1.5;
+}
+
+.big-container.flex{
+    height:100vh;
+}
+
+.container.grid{
+    max-width:1152px;
+    padding:4rem 1.5rem;
+    margin:auto;
+}
+
+/* Utilities */
+
+.grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap:1.5rem;
+}
+
+.flex{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.card{
+    padding:1.5rem 2rem;
+    border-radius: 0.5rem;
+    filter:drop-shadow(1px 1px 5px var(--Very-dark-grayish-blue));
+}
+
+.people.flex{
+    flex-direction: row;
+    align-items: center;
+    gap:1rem;
+    padding-bottom:1rem;
+}
+
+.people.flex img{
+    width:40px;
+    border-radius: 50%;
+}
+
+.details{
+    opacity:50%;
+}
+
+.heading{
+    font-size:1.2rem;
+    padding-bottom:1rem;
+}
+
+.comment{
+    opacity:70%;
+}
+
+/* first flex */
+
+.first.flex{
+    background-color: var(--Moderate-violet);
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-position: 90% top;
+    background-repeat: no-repeat;
+}
+
+.first.flex .name{
+    color:var(--White);
+}
+
+.first.flex .details{
+    color:var(--White);
+}
+
+.first.flex .heading{
+    color:white;
+}
+
+.first.flex .people.flex img{
+    border:2px solid rgba(255, 255, 255, 0.514);
+}
+
+.first.flex .comment{
+    color:var(--White);
+}
+
+/* Second Flex */
+
+.second.flex{
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+.second.flex .name{
+    color:var(--White);
+}
+
+.second.flex .details{
+    color:var(--White);
+}
+
+.second.flex .heading{
+    color:white;
+}
+
+.second.flex .people.flex img{
+    border:2px solid rgba(255, 255, 255, 0.514);
+}
+
+.second.flex .comment{
+    color:var(--White);
+}
+
+/* Third Flex & Fifth flex */
+
+.third.flex, .fifth.flex{
+    background-color: var(--White);
+}
+
+.third.flex .name,.fifth.flex .name{
+    color:var(--Very-dark-grayish-blue);
+}
+
+.third.flex .details, .fifth.flex .details{
+    color:var(--Very-dark-grayish-blue);
+}
+
+.third.flex .heading, .fifth.flex .heading{
+    color:var(--Very-dark-grayish-blue);
+}
+
+.third.flex .people.flex img, .fifth.flex .people.flex img {
+    border:2px solid rgba(255, 255, 255, 0.514);
+}
+
+.third.flex .comment, .fifth.flex .comment{
+    color:var(--Very-dark-grayish-blue);
+}
+
+
+/* Fourth Flex */
+
+.fourth.flex{
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+.fourth.flex .name{
+    color:var(--White);
+}
+
+.fourth.flex .details{
+    color:var(--White);
+}
+
+.fourth.flex .heading{
+    color:white;
+}
+
+.fourth.flex .people.flex img{
+    border:2px solid var(--Moderate-violet);
+}
+
+.fourth.flex .comment{
+    color:var(--White);
+}
+
+
+@media screen and (min-width:1100px){
+    .container.grid{
+        grid-template-columns: repeat(4,1fr);
+        padding:4rem 4rem;
+    }
+
+    .first.flex{
+        grid-column:1/span 2;
+    }
+    .fifth.flex{
+        grid-column: 4;
+        grid-row: 1/span 2;
+    }
+
+    .fourth.flex{
+        grid-column:2/span 2;
+    }
+}

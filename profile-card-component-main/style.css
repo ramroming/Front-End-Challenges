@@ -1,0 +1,135 @@
+:root{
+    
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+
+}
+
+*{
+    margin:0;
+    box-sizing:border-box;
+    padding:0;
+}
+
+body{
+    min-height:100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--Dark-cyan);
+}
+
+
+.flex{
+    display:flex;
+}
+
+.container.flex{
+    height:100vh;
+    margin:auto;
+    align-items:center;
+    justify-content: center;
+    position:relative;
+    overflow:hidden;
+}
+
+.bg-top{
+    position:absolute;
+    background-image: url(images/bg-pattern-top.svg);
+    background-size:contain;
+    background-repeat:no-repeat;
+    height:978px;
+    width:978px;
+    top:-528px;
+    left:-284px;
+}
+
+.bg-bottom{
+    position:absolute;
+    background-image: url(images/bg-pattern-bottom.svg);
+    background-size:contain;
+    background-repeat:no-repeat;
+    height:978px;
+    width:978px;
+    bottom:-600px;
+    right:-284px;
+    
+}
+.card.flex{
+    width:350px;
+    flex-direction: column;
+    background:url(./images/bg-pattern-card.svg) no-repeat top;
+    background-color:white;
+    border-radius:1rem;
+    padding-top:6rem;
+    filter:drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+}
+
+.porfilio.flex{
+    flex-direction: column;
+    align-items:center;
+    border-bottom:1px solid var(--Dark-gray);
+    gap:1rem;
+    padding-bottom:2rem;
+}
+
+.porfilio.flex img{
+    border-radius:50%;
+    border:5px solid white;
+}
+
+.details.flex{
+    gap:0.5rem;
+    align-items:center;
+    font-size:18px;
+}
+
+.name{
+    font-weight:700;
+    color:var(--Very-dark-desaturated-blue);
+}
+
+.age,.city{
+    color:var(--Dark-gray);
+}
+
+.stats.flex{
+    margin:auto;
+    justify-content: center;
+    text-align: center;
+    gap:3rem;
+    padding:2rem 0;
+}
+
+.stats-details.flex{
+    flex-direction: column;
+    gap:0.2rem;
+    color:var(--Dark-gray);
+    font-size:0.9rem;
+}
+
+.numbers{
+    color:var(--Very-dark-desaturated-blue);
+    font-size:18px;
+    font-weight:700;
+}
+
+
+/* media queries */
+
+@media screen and (max-width:375px){
+    .bg-top{
+        height:375px;
+        width:375px;
+        top:-160px;
+        left:-167px;
+    }
+
+    .bg-bottom{
+        height:375px;
+        width:375px;
+        bottom:-79px;
+        right:-167px;
+    }
+
+}

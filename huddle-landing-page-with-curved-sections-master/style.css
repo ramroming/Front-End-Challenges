@@ -1,0 +1,376 @@
+:root{
+    --Pink: hsl(322, 100%, 66%);
+    --Light-Pink: hsl(321, 100%, 78%);
+    --Light-Red: hsl(0, 100%, 63%);
+    --Very-Dark-Cyan: hsl(192, 100%, 9%);
+    --Very-Pale-Blue: hsl(207, 100%, 98%);
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+h1,h2,h3,h4,h5{
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration:none;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    color:var(--Very-Dark-Cyan);
+    line-height:1.5;
+
+}
+
+img{
+    width:100%;
+}
+
+.btn{
+    border-radius:2rem;
+    text-align:center;
+}
+
+a.btn:hover{
+    opacity:0.75;
+}
+.flex{
+    display:flex;
+    flex-direction: column;
+}
+
+.container.flex{
+    height:100vh;
+    margin:auto;
+    min-width:375px;
+    max-width:375px;
+    flex-direction: column;
+    padding:1rem 0rem;
+}
+
+/* navigation */
+
+.flex.nav{
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    gap:6rem;
+}
+
+.logo{
+    width:130px;
+    height:fit-content;
+    flex:1;
+    justify-self: flex-start;
+}
+
+.nav.flex a.btn{
+    flex:1;
+    justify-self: flex-end;
+    border:1px solid var(--Pink);
+    color:var(--Pink);
+    padding:0.3rem 0.3rem;
+    min-width:110px;
+    max-width:110px;
+    box-shadow:1px 1px 4px var(--Pink);
+    font-size: 14px;
+}
+
+/* section main */
+
+.main{
+    background:url(images/bg-section-top-mobile-1.svg) no-repeat bottom;
+}
+
+/* intro flex */
+
+.intro.flex{
+    flex-direction: column;
+    /* align-items:center;
+    justify-content:center; */
+    text-align: center;
+    padding:8rem 0.5rem 2rem 0.5rem;
+    
+}
+
+.intro.flex p{
+    padding:2rem 0;
+    font-size: 15px;
+}
+
+.pink.btn{
+    background-color:var(--Pink);
+    color:white;
+    font-weight:600;
+    align-self: center;
+    max-width:252px;
+    padding:0.75rem 3rem;
+    box-shadow: 1px 4px 7px darkgray;  
+}
+
+.intro.flex img{
+    padding:6rem 1rem;
+    max-width:700px;
+    align-self:center;
+}
+
+/* stats */
+
+.stats.flex{
+    margin:auto;
+    align-items:center;
+    padding-bottom:10rem;
+    gap:3rem;
+}
+.stats.flex img{
+    width:35px;
+}
+
+.stats.flex p{
+    font-size:3.5rem;
+    font-weight:700;
+}
+
+.stats.flex .down{
+    font-size:15px;
+    color:darkgray;
+    font-weight: 600;
+    text-align:center;
+}
+
+/* cards */
+.cards.flex{
+    text-align: center;
+}
+
+.cards.flex img{
+    width:250px;
+    align-self:center;
+    padding-bottom:3rem;
+}
+
+.cards.flex p{
+   font-size:14px;
+   padding:1rem 0.5rem 2rem 0.5rem;
+}
+
+/* first card */
+.first.flex{
+    padding-top:6rem;
+    background-color: var(--Very-Pale-Blue);
+}
+
+/* second card */
+
+.second.flex{
+    padding-top:10rem;
+    padding-bottom:10rem;
+    background-image:url(images/bg-section-bottom-mobile-1.svg),url(images/bg-section-top-mobile-2.svg);
+    background-repeat:no-repeat;
+    background-position:top,bottom;
+}
+
+/* third flex */
+
+.third.flex{
+    padding-top:5rem;
+    background-color:var(--Very-Pale-Blue);
+}
+
+/* foruth flex item */
+
+.ready.flex{
+    text-align: center;
+    gap:1.5rem;
+    padding:10rem 0 12rem 0;
+    background-image:url(images/bg-section-bottom-mobile-2.svg),url(images/bg-footer-top-mobile.svg);
+    background-repeat:no-repeat;
+    background-position: top,bottom;
+}
+
+/* footer */
+
+.footer.flex{
+    padding:0 2rem;
+    background-color:var(--Very-Dark-Cyan);
+    color:white;
+}
+
+.footer.flex h4{
+    text-transform: uppercase;
+    font-size:20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* newseletter */
+.newsletter.flex{
+    padding:4rem 0;
+    gap:1rem;
+}
+.subscribe.flex{
+    gap:1rem;
+}
+
+.newsletter.flex p{
+    padding:2rem 0;
+}
+
+.newsletter.flex input{
+    padding:1rem;
+    border-radius:0.3rem;
+    border:none;
+}
+
+.newsletter.flex input:focus{
+    outline:none;
+}
+
+.footer.flex .newsletter.flex a.pink.btn{
+    border-radius:0.3rem;
+    box-shadow:none;
+    padding-left:2.5rem;
+    padding-right:2.5rem;
+    align-self:flex-end;
+}
+
+/* contact */
+
+.contact.flex{
+    gap:1rem;
+}
+.contact.flex img{
+ filter:brightness(0)invert(1);
+ width:220px;
+}
+
+.contact.flex p{
+    padding-bottom:1rem;
+    font-size:15px;
+}
+.phone-email.flex{
+    gap:1rem;
+    padding-bottom:2rem;
+}
+.phone-email.flex img{
+    width:25px;
+    margin-right:1rem;
+}
+
+.phone.flex,.email.flex{
+    flex-direction: row;
+}
+
+.list.flex{
+    padding-bottom:4rem;
+    flex-direction: row;
+    gap:1rem;
+}
+
+/* media queries */
+
+@media screen and (min-width:930px){
+    .container.flex{
+        max-width:100%;
+    }
+
+    .intro.flex p{
+        max-width:472px;
+        align-self: center;
+    }
+
+    .nav.flex{
+        justify-content: space-around;
+    }
+
+    .main{
+        background:url(images/bg-section-top-desktop-1.svg) no-repeat bottom;
+    }
+
+    .second.flex{
+        background-image:url(images/bg-section-bottom-desktop-1.svg),url(images/bg-section-top-desktop-2.svg);
+    }
+
+    .ready.flex{
+        background-image:url(images/bg-section-bottom-desktop-2.svg),url(images/bg-footer-top-desktop.svg);
+    }
+
+    .stats.flex{
+        flex-direction: row;
+        justify-content: center;
+        gap:10rem;
+    }
+
+    .first.flex,.second.flex,.third.flex{
+        flex-direction: row;
+        align-items:center;
+        justify-content: center;
+        padding-left:3rem;
+        padding-right:3rem;
+        gap:4rem;
+        text-align:left;
+    }
+
+    .first.flex p,.second.flex p,.third.flex p{
+       max-width:450px;
+       padding-left:0;
+    }
+
+    .first.flex h4,.second.flex h4,.third.flex h4{
+        font-size:20px;
+     }
+     
+    
+    .third.flex{
+        padding-top:0;
+    }
+
+    .first.flex img, .third.flex img{
+        order:2;
+    }
+
+    .footer.flex{
+        padding-top:1rem;
+        flex-direction: row;
+       justify-content:space-evenly;
+       gap:4rem;
+    }
+
+    .newsletter.flex{
+        padding-top:0;
+        order:2;
+    }
+   
+    .subscribe.flex{
+        flex-direction: row;
+        gap:2rem;
+    }
+
+    .subscribe.flex input{
+        width:300px;
+    }
+
+    .newsletter.flex p{
+        max-width:370px;
+        padding:1rem 0;
+    }
+    .contact.flex p{
+        max-width:270px;
+    }
+
+    
+
+    .ready.flex h2{
+        margin-top:5rem;
+    }
+    .ready.flex a.btn{
+        margin-bottom:5rem;
+    }
+
+
+}
